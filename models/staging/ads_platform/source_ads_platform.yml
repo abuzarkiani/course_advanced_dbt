@@ -5,3 +5,35 @@ sources:
     tables:
       - name: daily_ads
         identifier: ads
+        description: '{{ doc("table_daily_ads") }}'
+        columns:
+        - name: date
+          description: '{{ doc("daily_ads_date") }}'
+          tests:
+            - not_null
+          
+        - name: campaign_id
+          description: '{{ doc("daily_ads_campaign_id") }}'
+          tests:
+            - not_null
+          
+        - name: surrogate_key
+          description: '{{ doc("daily_ads_surrogate_key") }}'
+          tests:
+            - not_null
+            - unique
+            
+        - name: spend
+          description: '{{ doc("daily_ads_spend") }}'
+          tests:
+            - not_null
+          
+        - name: cpm
+          description: '{{ doc("daily_ads_cpm") }}'
+          tests:
+            - not_null
+          
+        - name: ctr
+          description: '{{ doc("daily_ads_ctr") }}'
+          tests:
+            - not_null

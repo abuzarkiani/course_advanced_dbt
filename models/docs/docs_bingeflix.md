@@ -1,7 +1,7 @@
 # Bingeflix Docs
 This file contains docs blocks for Bingeflix sources
 
-## Events
+## Events Table
 {% docs table_events %}
 This table contains information about the behavioral events of users while they interact with the Bingeflix platform. It includes events such as logins, logouts, videos watched, and CTA/button clicks.
 {% enddocs %}
@@ -23,7 +23,7 @@ The name of the event.
 The unique identifier of the event.
 {% enddocs %}
 
-## Subscription_Plans
+## Subscription_Plans Table
 {% docs table_subscription_plans %}
 This table contains information about the subscription plans available at Bingeflix.
 {% enddocs %}
@@ -46,7 +46,7 @@ The price of the subscription.
 The recurring payment period for the subscription.
 {% enddocs %}
 
-## Subscriptions
+## Subscriptions Table
 {% docs table_subscriptions %}
 This table contains subscription-related information, such as subscription plan IDs, subscription start dates, renewal dates, billing information, and any other relevant subscription details.
 {% enddocs %}
@@ -65,7 +65,7 @@ When the subscription ends. This value is NULL if the subscription is active.
 The unique identifier for the subscription.
 {% enddocs %}
 
-## Users
+## Users Table
 {% docs table_users %}
 This table stores information about Bingeflix users, including user IDs, usernames, email addresses, subscription start dates, and other relevant user details.
 {% enddocs %}
