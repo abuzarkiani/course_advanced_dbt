@@ -147,7 +147,6 @@ unioned AS (
 mrr_with_changes AS (
     SELECT
         *,
-
         COALESCE(
             LAG(is_subscribed_current_month) OVER (PARTITION BY user_id, subscription_id ORDER BY date_month),
             FALSE
@@ -158,7 +157,9 @@ mrr_with_changes AS (
             0.0
         ) AS previous_month_mrr_amount,
 
-        mrr - previous_month_mrr_amount AS mrr_change
+        mrr - previous_month_mrr_amount AS mrr_change,
+
+        {{ apply_date_manipulation('unioned.date_month', 'subscription_periods.start_month', 'subscription_periods.end_month') }} AS is_within_subscription_period
     FROM
         unioned
 ),
